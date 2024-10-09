@@ -1,0 +1,274 @@
+:root{
+    --main-color: #2E3192;
+    --sec-color:  #1BFFFF;
+    --border-color: #00ff0d;
+    --head: #ffffff;
+    --para: #ffffffc5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.cont{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top right, var(--main-color), var(--sec-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 8rem;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+    user-select: none;
+}
+
+.about h1{
+    color: var(--head);
+    margin-bottom: 2rem;
+    position: relative;
+    width: 50%;
+}
+
+.about h1::after, .about h1::before{
+    content: "";
+    position: absolute;
+    height: .3rem;
+    bottom: -6px;
+    left: 0;
+}
+
+.about h1::after{
+    animation: 1.5s move linear forwards;
+    background: linear-gradient(to right, transparent -10% , #f300fc);
+}
+
+.about h1::before{
+    animation: 1.5s backmove linear forwards;
+    background: linear-gradient(to left, transparent, #f300fc);
+}
+
+@keyframes move{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes backmove{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+
+.about p{
+    color: var(--para);
+    font-weight: 300;
+    font-size: large;
+}
+
+.game-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.game-field input{
+    width: 20rem;
+    height: 2rem;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    outline: none;
+}
+
+.game-field label{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #fff;
+    transition: .5s;
+    font-size: 19px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.game-field input:focus{
+    border: 2px solid var(--border-color);
+}
+
+.game-field input:focus ~ label, label.active,
+.game-field input:valid ~ label, label.active{
+    top: 0;
+    font-size: 1rem;
+    background: var(--border-color);
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.game-field input:not(:focus) ~ label, label.active{
+    background: #fff;
+    color: #000;
+    padding: 0 10px;
+}
+
+label, label.active{
+    background: transparent;
+    color: #fff;
+}
+
+.btnCont button{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    margin: 0 10px;
+    transition: .5s;
+    user-select: none;
+    border-radius: 10px;
+}
+
+#guessSubmit{
+    color: var(--border-color);
+}
+
+#guessSubmit:hover{
+    background: var(--border-color);
+    color: white;
+}
+
+#resetBtn{
+    margin-top: 0.7rem;
+    color: red;
+    display: none;
+}
+
+#resetBtn:hover{
+    background: red;
+    color: #fff;
+}
+
+.result {
+    font-size: 2rem;
+    line-height: 4.5rem;
+}
+
+.result #endMsg{
+    margin-top: 2rem;
+}
+
+.result #lowOrHi{
+    margin-top: 1.rem;
+    border-radius: 10px;
+}
+
+#guesses{
+    color: #fff;
+}
+
+
+@media(max-width: 750px){
+   .cont{
+       padding: 6rem;
+   }
+  .result{
+      line-height: 3.5rem;
+  }
+   
+@media(max-width: 630px){
+   .cont{
+       padding: 5rem;
+   }
+  .result{
+      line-height: 3rem;
+  }
+
+@media(max-width: 563px){
+   .cont h1{
+       font-size:1.5rem;
+   }
+  .result{
+      line-height: 2.7rem;
+  }
+   
+   @media(max-width: 510px){
+      .cont{
+          padding: 3.5rem;
+      }
+     .cont h1{
+         font-size: 1.5rem;
+     }
+     
+     @media(max-width: 470px){
+         .result{
+             font-size: 1.5rem;
+             line-height: 2.2rem;
+         }
+         .result #endMsg{
+    margin-top: 0.5rem;
+}
+
+.result #lowOrHi{
+    margin-top: 0.5rem;
+}
+     }
+     
+     @media(max-width: 415px){
+      .cont{
+          padding: 2.5rem;
+      }
+     .cont h1{
+         font-size: 1.2rem;
+     }
+     
+     @media(max-width: 380px){
+         .result{
+             font-size: 1.2rem;
+             line-height: 2rem;
+         }
+         
+         .result #endMsg{
+    margin-top: 0.2rem;
+}
+
+.result #lowOrHi{
+    margin-top: 0.2rem;
+}
+     }
+     
+     @media(max-width: 321px){
+      .cont{
+          padding: 2rem;
+      }
+     .cont h1{
+         font-size: 1rem;
+     }
+   }
+}
+}

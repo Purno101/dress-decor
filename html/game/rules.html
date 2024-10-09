@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rules | Purno</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom left, #C6EA8D, #FE90AF);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+       .about{
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           text-align: center;
+           gap: 2rem;
+       }
+       
+       h1, h2, h3{
+           color: #fff;
+           position: relative;
+       }
+       
+       h1:after{
+           position: absolute;
+           content: "";
+           height: 4px;
+           width: 100%;
+           background: linear-gradient(to right, #C6EA8D, #FE90AF);
+           bottom: -4px;
+           left: 0;
+       }
+       
+       button{
+           width: 5.5rem;
+           height: 2.3rem;
+           border: 2px solid white;
+           background: transparent;
+           outline: none;
+           color: white;
+       }
+       
+       button:hover{
+           background: linear-gradient(to top right, #C6EA8D, #FE90AF);
+           border: 2px solid hotpink;
+       }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="about">
+        <h1>Rules of Tic-Tac-Toe</h1>
+        <h3>Suppose You are X , your friend is O. Players take turns putting their marks in empty<br> squares. The first player to get 3 of her marks<br> in a row (up, down, across, or diagonally)<br> is the winner. When all 9 squares are full, the game is over. Then if none of the players can't match 3, it is a draw.</h3>
+        <h2>Shall you have Game now?</h2>
+        <a href="TTTgame.html"><button>Play Game</button></a>
+    </div>
+    
+</body>
+</html>

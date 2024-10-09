@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game | Purno</title>
+    <link rel="stylesheet" href="../../css/game/TTTlayout.css">
+    <script src="../../js/game/TTTengine.js" defer></script>
+</head>
+<body>
+    
+    <div class="about">
+        <h1 id="head">Game Setup</h1>
+        <p id="para">Please select opening symbol.</p>
+        <div class="score-board">
+            <h4 id="Xscore"></h4>
+            <h4 id="Oscore"></h4>
+        </div>
+        <div class="setting">
+            <input type="text" placeholder="Name of the Player 'X'" id="selX" spellcheck="flase">
+            <input type="text" placeholder="Name of the Player 'O'" id="selO" spellcheck="false">
+            <button id="startGame">Start</button>
+        </div>
+    </div>
+    
+    <div class="gameField">
+        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+    </div>
+    
+    <div class="result">
+        <h3 id="result"></h3>
+        <button id="resetBtn" onclick="resetGame()">Replay?</button>
+    </div>
+    
+    
+</body>
+</html>
